@@ -1,0 +1,57 @@
+@import "../participant/participant.wxss";
+
+/* 添加好友 */
+.add{
+  border: 1px dashed  #ccc;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  width: 70%;
+  margin:30rpx auto;
+} 
+.add>text{
+  color: #575757;
+}
+.addipt{
+  width: 90%;
+  height:80rpx;
+  background: #e6f0e2;
+  border: 1px solid #e6f0e2;
+  border-radius: 100rpx;
+  margin:50rpx auto;
+  text-align: center
+}
+.confirm{
+  width: 50%;
+  height:80rpx;
+  background: #9bc08a;
+  border: 1px solid #9bc08a;
+  border-radius: 100rpx;
+  color: white;
+  line-height: 70rpx;
+  margin-top:50rpx ;
+  position: fixed;
+  bottom: 40rpx;
+  z-index: 22;
+  left:0px;
+  right:0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 删除好友 */
+.selecttwo{
+  width:50rpx;
+height:50rpx;
+/* margin-right: 20rpx */
+}
+.part{
+position:absolute;
+right:20rpx;
+top:8rpx;
+}
+.xx-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto 20rpx auto 0;
+}

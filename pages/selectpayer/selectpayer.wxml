@@ -1,0 +1,12 @@
+<!-- 选择付款者 -->
+<view class='search'>
+  <icon type='search' class='search-img' size='20' color='#9bc08a'></icon>
+  <input type='text' placeholder='搜索好友' placeholder-class='placeholder' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onBindConfirm' value='{{searchInput}}' class='searchbar'/>
+</view>
+  <block wx:for="{{type}}" wx:key='menber'>
+    <view class='one-member'>
+      <image src='../../images/fellow.png' class='img'></image>
+      <text>{{item.userName}}</text>
+      <image class='select' src="{{item.status? hasSelect : noSelect}}" data-userId="{{item.userId}}" data-userName="{{item.userName}}"bindtap="checkTap" ></image>
+    </view>
+  </block>

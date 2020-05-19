@@ -1,0 +1,65 @@
+.header{
+  height: 240rpx;
+  background: #9bc08a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+.type-img{
+  width: 70rpx;
+  height:70rpx;
+  margin-bottom: 10rpx;
+  border:1px solid white;
+  border-radius: 50%;
+  padding: 20rpx; 
+}
+.title{
+  width: 80rpx;
+  height: 120rpx;
+}
+.beizhu{
+  width: 70rpx;
+  height: 70rpx;
+}
+.rili{
+  width:60rpx;
+  height: 70rpx;
+}
+.detail{
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:15rpx; 
+  margin-top: 0;
+  border-bottom:1rpx solid #dfdfdf 
+}
+.remark{
+  height: 150rpx;
+  align-items: stretch;
+  padding-top: 35rpx
+}
+.genre{
+  color: #b3b3b3;
+  padding:0 33rpx 0 20rpx;
+}
+.fastener{
+  margin-top: 70rpx;
+  display: flex;
+  flex-direction: row;
+  
+}
+.commonbtn{
+  width: 220rpx;
+  height: 100rpx;
+  color: white;
+  padding: 0;
+}
+.editbtn{
+  background: #9bc08a;
+  margin-right: 60rpx
+}
+.deletebtn{
+  background: #f4c73d;
+}

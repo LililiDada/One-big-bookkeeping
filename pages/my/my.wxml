@@ -1,0 +1,22 @@
+<!-- 我的页面 -->
+<view class='usemsg'>
+  <image src="{{avtarimg}}" class='avtar-img'></image>
+  <text>{{username}}</text>
+</view>
+<view class='apart'></view>
+<view class='other'>
+  <view class='yusuan' bindtap='fillBudget'>
+    <image src='../../images/yusuan.png' class='yusuan-img'></image>
+    <text style='font-size:35rpx'>月预算</text>
+    <text  class='yusuanipt'>{{budgetMonry}}</text>
+    <image src='../../images/jiantou.png' class='jaintou-img' ></image>
+  </view>
+  <view class='shezhi' bindtap='quitTap' wx:if='{{settingShow}}'>
+    <image src='../../images/shezhi.png' class='shezhi-img'></image>
+    <text style='font-size:35rpx'>设置</text>
+    <image src='../../images/jiantou.png' class='jinru-img' ></image>
+  </view>
+  <view wx:if='{{loginbtnShow}}'>
+    <button class='loginbtn' bindtap='loginTap'>登录</button>
+  </view>
+</view>

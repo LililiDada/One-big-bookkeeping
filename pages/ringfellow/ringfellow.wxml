@@ -1,0 +1,73 @@
+<!-- <view wx:if='{{addfellow}}'>
+ <input type='text' class='addipt' focus='{{true}}'	bindinput='getInput'/>
+ <button class='confirm' bindtap='confirmTap'>确定</button>
+</view> -->
+
+
+<!-- 添加好友 -->
+<view wx:if='{{addfellow}}'>
+  <view class='header'>
+    <view class='add' bindtap='addTap'>
+      <text>+ 添加成员</text>
+    </view>
+  </view>
+  <view class='top'>
+    <view class='search'>
+      <icon type='search' class='search-img' size='20' color='#9bc08a'></icon>
+      <input type='text' placeholder='搜索好友' placeholder-class='placeholder' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onAddConfirm' value='{{searchInput}}' class='searchbar' />
+      <image wx:if="{{searchPanelShow}}" src="../../images/chahao.png" class="xx-img" bindtap="onaddCancelTap"></image>
+    </view>
+    <text class='if-selectall' bindtap='selectTap'>{{ifselectall?'取消全选':'全选'}}</text>
+  </view>
+
+  <!--好友显示 -->
+  <block wx:for="{{type}}" wx:key='menber' wx:if='{{partShow}}'>
+    <view class='one-member'>
+      <image src='../../images/fellow.png' class='img'></image>
+      <text>{{item.userName}}</text>
+      <image class='select' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap" wx:if="{{item.checked}}"></image>
+      <image class='select' src='../../images/checked.png' wx:if='{{!item.checked}}'></image>
+    </view>
+  </block>
+
+
+  <!-- 添加好友中的搜索 -->
+  <view class='one-member' wx:if='{{searchShow}}' wx:for='{{type}}' wx:key='index'>
+    <image src='../../images/fellow.png' class='img'></image>
+    <text>{{item.userName}}</text>
+    <image class='select' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap" wx:if="{{!item.checked}}"></image>
+    <image class='select' src='../../images/checked.png' wx:if='{{item.checked}}'></image>
+  </view>
+
+  <button class='confirm' bindtap='addFellowTap'>确定</button>
+</view>
+
+<!-- 删除好友 -->
+<view wx:if='{{deletefellow}}'>
+  <view class='top'>
+    <text class='if-selectall' bindtap='selectTap'>{{ifselectall?'取消全选':'全选'}}</text>
+    <view class='search'>
+      <icon type='search' class='search-img' size='20' color='#9bc08a'></icon>
+      <input type='text' placeholder='搜索好友' placeholder-class='placeholder' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onDeleteConfirm' value='{{searchInput}}' class='searchbar' />
+      <image wx:if="{{searchPanelShow}}" src="../../images/chahao.png" class="xx-img" bindtap="ondeleteCancelTap"></image>
+    </view>
+  </view>
+
+  <block wx:for="{{type}}" wx:key='menber' wx:if='{{partShow}}'>
+    <view class='one-member'>
+      <image class='selecttwo' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap"></image>
+      <view class='part'>
+        <text>{{item.userName}}</text>
+      </view>
+    </view>
+  </block>
+
+  <!-- 删除好友中的搜索 -->
+  <view class='one-member' wx:if='{{searchShow}}' wx:for='{{type}}' wx:key='index'>
+    <image class='selecttwo' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap"></image>
+    <view class='part'>
+      <text>{{item.userName}}</text>
+    </view>
+  </view>
+  <button class='confirm' bindtap='deleteFellowTap'>确定</button>
+</view>

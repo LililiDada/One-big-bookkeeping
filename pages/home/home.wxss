@@ -1,0 +1,118 @@
+@import "../bill-template/bill-template.wxss";
+@import "../search-template/search-template.wxss";
+.homehaeder {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #9bc08a;
+  height: 140rpx;
+}
+
+.monthmsg {
+  width: 75%;
+  text-align: left;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  padding-left: 15rpx;
+}
+
+.monthsmallmsg {
+  display: flex;
+  margin-top: 10rpx;
+}
+
+.monthIncome {
+  width: 50%;
+  text-align: left;
+}
+
+.monthBalance {
+  width: 50%;
+  text-align: left;
+}
+
+.border {
+  margin-top: 20rpx;
+  width: 1px;
+  height: 90rpx;
+  border: solid #fff 1px;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  height: 80rpx;
+  width: 100%;
+}
+
+.search input {
+  height: 100%;
+  width: 600rpx;
+  margin-left:20px;
+  padding-left: 40rxp;
+  font-size: 28rpx;
+  /* border:solid 1px #9bc08a */
+}
+
+.search-img {
+  margin: auto 0 auto 20rpx;
+}
+
+.pickermonth{
+  margin-left: 20rpx;
+  margin-top: 15rpx;
+  width: 150rpx;
+  border: 1px solid white;
+  border-radius: 15rpx;
+}
+.selectmonth{
+  float: left;
+  margin:5rpx 0 0 10rpx 
+}
+.bill{
+  background: #eee;
+}
+
+.xx-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto 20rpx auto 0;
+}
+
+.cue{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 70%;
+  width: 100%;
+}
+
+.homebill-img{
+  width: 250rpx;
+  margin: 0
+}
+
+.home-cue{
+  margin-top:20rpx; 
+  font-size: 22px;
+  color:rgb(112, 111, 111);
+  font-family: "微软雅黑"
+}
+.search-panel{
+  text-align: center
+}
+.search-cue{
+  font-size: 40rpx;
+  color: rgb(153, 153, 151);
+}
+
+.loadedTip{
+  text-align: center;
+  background: white;
+  padding: 20rpx 0;
+  color: #1e1c1c
+}

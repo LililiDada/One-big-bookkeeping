@@ -1,0 +1,5 @@
+<!-- 添加月预算 -->
+<view> 
+ <input type='digit' class='budgetipt' focus='{{true}}'	bindinput='getInput'/>
+ <button class='confirm' bindtap='confirmTap'>确定</button>
+</view>

@@ -1,0 +1,44 @@
+@import "../account-template/account-template.wxss";
+
+.back{
+  display:flex; 
+  align-items: center; 
+  margin-top: 20rpx;
+}
+.back-img{
+  display: inline-block;
+  width:40rpx;
+  height:40rpx;
+}
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+  width:300rpx;
+  border:1px solid #9bc08a;
+  border-radius:15rpx;
+  margin: 5rpx auto;
+  color: #9bc08a;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 70rpx;
+}
+.navbar .item.active{
+  color: white;
+  background: #9bc08a;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4rpx;
+  background: #9bc08a;
+}

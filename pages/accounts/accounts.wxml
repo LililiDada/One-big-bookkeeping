@@ -1,0 +1,24 @@
+<!-- 添加账单 -->
+<import src="../account-template/account-template.wxml" />
+<view class='back'>
+  <view bindtap='back' style='width:50rpx'>
+    <image src='../../images/fanhui.png' class='back-img' bindtap='back'></image>
+  </view>
+  <!--导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}"  class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+</view>
+
+
+<!--支出-->
+<view hidden="{{currentTab!==0}}">
+  <template is="scrolltemplate" data="{{type:type,currentType:currentType}}"/>
+  <template is="accounttemplate" data="{{clicksrc:clicksrc,clicktitle:clicktitle,month:month,day:day}}"/>
+</view>
+
+<!--收入-->
+<view hidden="{{currentTab!==1}}">
+  <template is="scrolltemplate" data="{{type:type1,currentType:currentType}}"/>
+  <template is="accounttemplate" data="{{clicksrc:clicksrc,clicktitle:clicktitle,month:month,day:day}}"/>
+</view>

@@ -1,0 +1,36 @@
+.header{
+  padding-top: 70rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f5b74b
+}
+.sum{
+  font-size: 60rpx
+}
+.menber{
+  color: rgb(173, 169, 169);
+  width:90%;
+  display: flex;
+  justify-content: space-around;
+  margin-top:50rpx; 
+}
+.payer,.part{
+  color: black;
+}
+.row{
+  height: 140rpx;
+  border-bottom: 1rpx solid #f6f6f6;
+  display: flex;
+  align-items: center;
+  padding:0 30rpx;
+  position: relative;
+}
+.val{
+  position: absolute;
+  right: 30rpx;
+  text-align: right;
+  color: #8c8b8a;
+}

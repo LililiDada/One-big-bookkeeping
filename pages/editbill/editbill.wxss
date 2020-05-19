@@ -1,0 +1,3 @@
+@import "../account-template/account-template.wxss";
+@import "../accounts/accounts.wxss";
+

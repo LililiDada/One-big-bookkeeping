@@ -1,0 +1,51 @@
+/* pages/cc/cc.wxss */
+.search-specific{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 140rpx;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+.imgstyle{
+  margin-left:20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #9bc08a;
+  display:flex;
+
+}
+.search-remark{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  margin-left: 20rpx;
+}
+.search-detail{
+  color: #e28e9d;
+  font-weight: 600;
+}
+.search-details{
+  color: #5997bb;
+  font-weight: 600;
+}
+.last{
+  position: absolute;
+  right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center
+}
+.remarks,.searchDate{
+  font-size:30rpx;
+  margin-top:5rpx;
+  color: rgb(180, 177, 177)
+}
+ image{
+  width: 50rpx;
+  height: 50rpx;
+  margin:auto;
+
+} 

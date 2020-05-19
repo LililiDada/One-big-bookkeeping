@@ -1,0 +1,27 @@
+<!-- 圈子详情 -->
+<view class='ring-name'>
+  <view class="ring-img">
+    <image src="{{image}}"></image>
+  </view>
+  <text>{{circleName}}</text>
+  <image src='../../images/more.png' bindtap='moreTap' class='more'></image>
+</view>
+<scroll-view class="grid-container" scroll-y="true" scroll-x="false" bindscrolltolower="onScrollLower" style=' height: 1200rpx;'>
+  <block wx:for='{{bill}}' wx:key='ring'>
+    <view class='ringbill' bindtap='detailbillTap' data-chargeid='{{item.chargeId}}' data-categoryName='{{item.categoryName}}' data-remarks='{{item.remarks}}'>
+      <view class='img-box'>
+        <image src='{{item.image}}' class='img'></image>
+      </view>
+      <view class='billname'>
+        <text class='name'>{{item.categoryName}}</text>
+        <text class='remarks'>{{item.remarks}}</text>
+      </view>
+      <view class='billelse'>
+        <text class='sum'>{{item.averageAmount}}</text>
+        <text class='time'> {{item.date}}</text>
+      </view>
+      <view></view>
+    </view>
+  </block>
+</scroll-view>
+<button class='add' bindtap='addTap'>记一笔</button>

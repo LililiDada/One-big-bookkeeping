@@ -1,0 +1,49 @@
+<!-- 圈子内添加账单 -->
+<import src="../account-template/account-template.wxml" />
+<view class='sort'>支出</view>
+<template is='scrolltemplate' data="{{type:type,currentType:currentType}}" />
+<view class='big-payment'>
+  <view class='payment' bindtap='selectTap'>
+    <image src='../../images/men.png' class='person'></image>
+    <text class='payment-men'>付款人</text>
+    <image src='../../images/add.png' class='arrow'></image>
+  </view>
+  <view class='payment'>
+    <image src='../../images/fellow.png' class='person-img'></image>
+    <text class='payment-name'>{{payer.userName}}</text>
+    <input type='digit' value='{{allAmount}}' class='sum' placeholder='0' bindinput='moneyChange' />
+  </view>
+</view>
+<view style='height:25rpx;background: #f4fafb;'></view>
+<view class='big-payment' style='margin-bottom:0'>
+  <view class='payment' bindtap='participantTap'>
+    <image src='../../images/person.png' class='person'></image>
+    <text class='payment-men'>参与人</text>
+    <image src='../../images/add.png' class='arrow'></image>
+  </view>
+  <block wx:for='{{participant}}' wx:key='payment'>
+    <view class='payment'>
+      <image src='../../images/fellow.png' class='person-img'></image>
+      <text class='payment-name'>{{item.userName}}</text>
+      <input type='digit' value='{{item.money}}' class='sum' placeholder='0' disabled='disabled' focus='focus'/>
+    </view>
+  </block>
+  <view class='more' bindtap='participantTap' wx:if='{{morefiveShow}}'>
+    <text>共有{{allCount}}个人</text>
+    <image src='../../images/add.png' class='more-img'></image>
+  </view>
+</view>
+<view style='height:25rpx;background: #f4fafb;'></view>
+<view class='big-more'>
+<view class='detail select-date'>
+  <image src='../../images/rili.png' style='width:60rpx;height:60rpx'></image>
+  <text style='margin-left:20rpx'>日期</text>
+  <picker mode='date' start='2000/01/01' end='2029/12/31' bindchange='bindDateChange' class='concet-date'>{{month}}月{{day}}日 </picker>
+</view>
+<view class='remark detail '>
+  <image src='../../images/remark.png' style='width:60rpx;height:60rpx'></image>
+  <text style='margin-left:23rpx'>备注</text>
+  <input class='remarkmsg' bindblur='getRemark' value='{{remarks}}'/>
+</view>
+<button class='confirmbtn' bindtap='addbill'>确定</button>
+</view>

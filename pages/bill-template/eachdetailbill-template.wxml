@@ -1,0 +1,12 @@
+zs3s<template name='detailbillTemplate'>
+  <view class='bill-specific'>
+        <view class='imgstyle'>
+          <image src='{{typeImg}}' class='billtype'></image>
+        </view>
+        <view class='bill-remark'>
+          <text style='color:black'>{{smallType}}</text>
+          <text style='font-size:30rpx;margin-top:5rpx'>{{remarks}}</text>
+        </view>
+        <text class='bill-detail' class="{{sort=='收入'?'bill-details':'bill-detail'}}">{{money}}</text>
+      </view>
+</template>

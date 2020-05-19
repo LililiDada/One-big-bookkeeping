@@ -1,0 +1,6 @@
+<!-- 添加圈子成员 -->
+<view> 
+ <input type='text' class='addipt' focus='{{true}}'	bindinput='getInput'/>
+ <button class='confirm' bindtap='addringpart' wx:if='{{addringpart}}'>确定</button>
+ <button class='confirm' bindtap='addbillpart' wx:if='{{addbillpart}}'>确定</button>
+</view>

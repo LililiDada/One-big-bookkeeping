@@ -1,0 +1,16 @@
+<!-- 编辑账单 -->
+<import src="../account-template/account-template.wxml" />
+<!--导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" wx:key='item' data-idx="{{index}}"  class="item {{currentTab==index ? 'active' : ''}}" bindtap="navbarTap">{{item}}</text>
+  </view>
+<!-- 支出  -->
+<view hidden="{{currentTab!==0}}">
+  <template is="scrolltemplate" data="{{type:type,currentType:currentType}}"/>
+  <template is="altertemplate" data="{{clicksrc:clicksrc,clicktitle:clicktitle,date:date,sum:sum,remark:remark}}"/>
+</view>
+<!-- 收入 -->
+<view hidden="{{currentTab!==1}}">
+  <template is="scrolltemplate" data="{{type:type1,currentType:currentType}}"/>
+  <template is="altertemplate" data="{{clicksrc:clicksrc,clicktitle:clicktitle,date:date,sum:sum,remark:remark}}"/>
+</view>

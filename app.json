@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/ring/ring",
+    "pages/billdetail/billdetail",
+    "pages/editbill/editbill",
+    "pages/accounts/accounts",
+    "pages/addring/addring",
+    "pages/fellow/fellow",
+    "pages/addfellow/addfellow",
+    "pages/detailring/detailring",
+    "pages/addbill/addbill",
+    "pages/aboutdetailring/aboutdetailring",
+    "pages/ringfellow/ringfellow",
+    "pages/selectpayer/selectpayer",
+    "pages/participant/participant",
+    "pages/countbill/countbill",
+    "pages/paystatus/paystatus",
+    "pages/ringbilldetail/ringbilldetail",
+    "pages/my/my",
+    "pages/monthbudget/monthbudget",
+    "pages/set/set",
+    "pages/homepage/homepage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#9bc08a",
+    "navigationBarTitleText": "壹大记账",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/tab/shouye_h1.png",
+        "selectedIconPath": "images/tab/shouye.png"
+      },
+      {
+        "pagePath": "pages/accounts/accounts",
+        "text": "记一笔",
+        "iconPath": "images/tab/jia_h1.png",
+        "selectedIconPath": "images/tab/jia.png"
+      },
+      {
+        "pagePath": "pages/ring/ring",
+        "text": "圈子",
+        "iconPath": "images/tab/quanzi_h1.png",
+        "selectedIconPath": "images/tab/quanzi.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tab/wode_h1.png",
+        "selectedIconPath": "images/tab/wode.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

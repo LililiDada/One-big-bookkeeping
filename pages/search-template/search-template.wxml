@@ -1,0 +1,15 @@
+<template name='searchBillTemplate'>
+  <view class='search-specific' bindtap='onBillTap' data-accountid="{{accountid}}" data-image="{{image}}" data-sort="{{sort}}" data-money="{{money}}" data-categoryName="{{categoryName}}" data-remarks="{{remarks}}" data-day="{{date}}" data-date='{{day}}' >
+    <view class='imgstyle'>
+      <image src='{{image}}'></image>
+    </view>
+    <view class='search-remark'>
+      <text style='color:black' class='searchtype'>{{categoryName}}</text>
+      <text class='remarks'>{{remarks}}</text>
+    </view>
+    <view class='last'>
+      <text class="{{sort=='收入'?'searchl-details':'search-detail'}}">{{money}}</text>
+      <text class='searchDate'>{{date}}</text>
+    </view>
+  </view>
+</template>

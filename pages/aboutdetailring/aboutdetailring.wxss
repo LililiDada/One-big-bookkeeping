@@ -1,0 +1,46 @@
+.title{
+  display: block;
+  margin: auto;
+  margin-top: 10rpx;
+  width: 250rpx;
+  height: 120rpx
+}
+.part{
+  padding:0 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  /* 自动换行 */
+  color: #747272;
+  text-align: center;
+}
+.change{
+  width: 90rpx;
+  height: 90rpx;
+  border: 1rpx solid rgb(182, 182, 182);
+  line-height: 75rpx; 
+  font-size: 80rpx;
+  font-weight:320;
+  margin:30rpx 25rpx 5rpx 19rpx;
+}
+.one-part{
+  display: flex;
+  flex-direction: column;
+  margin:10rpx 25rpx 5rpx 19rpx;
+}
+.part-img{
+  width: 100rpx;
+  height: 100rpx;
+}
+.all-btn{
+  position: fixed;
+  display: flex;
+  bottom: 80rpx;
+  width: 100%;
+  margin:0 auto;
+  z-index: 99
+}
+.all-btn button{
+  background: #9bc08a;
+  color: white;
+  width: 280rpx;
+}

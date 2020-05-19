@@ -1,0 +1,67 @@
+<!--首页-->
+<import src="../bill-template/bill-template.wxml" />
+<import src="../search-template/search-template.wxml" />
+<view class='homehaeder'>
+  <view class='monthmsg'>
+    <view>
+      <text>月支出 </text>
+      <text>{{paid}}</text>
+    </view>
+    <view class='monthsmallmsg'>
+      <view class='monthIncome'>
+        <text>月收入 </text>
+        <text>{{income}}</text>
+      </view>
+      <view class='monthBalance'>
+        <text>月余额 </text>
+        <text>{{budget}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='border'></view>
+  <view style='width:25%; text-align:center'>
+    <text>{{year}}年</text>
+    <picker mode='date' fields='month' start='2000/01/01' end='2029/12/31' bindchange='bindDateChange' class='pickermonth'>
+      <view class='selectmonth'>{{month}}月</view>
+      <image src='../../images/xiala.png' style='width:50rpx;height:50rpx;margin-top:4rpx'></image>
+    </picker>
+  </view>
+</view>
+<!-- 搜索框 -->
+<view class='search'>
+  <icon type='search' class='search-img' size='20' color='#9bc08a'></icon>
+  <input type='text' placeholder='请输入具体类型,如:餐饮,兼职等或输入备注' placeholder-class='placeholder' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onBindConfirm' value='{{searchInput}}' />
+  <image wx:if="{{searchPanelShow}}" src="../../images/chahao.png" class="xx-img" bindtap="onCancelTap"></image>
+</view>
+<!-- 具体账单 -->
+<view class='bill' wx:if="{{billShow}}">
+  <scroll-view class="grid-container" scroll-y="true" scroll-x="false"  style=' height: 870rpx;'>
+    <block wx:for="{{billList}}" wx:key="billList" wx:for-item="item">
+      <template is='billTemplate' data="{{...item}}" />
+    </block>
+    <view wx:if='{{showTip}}' class='loadedTip'>
+      <text>数据已加载完毕</text>
+    </view>
+  </scroll-view>
+
+</view>
+<!-- 搜索账单情况 -->
+<view class='search-panel' wx:if="{{searchPanelShow}}">
+  <!-- <text decode="{{true}}" class='search-cue'>
+    请输入具体类型,如:餐饮,兼职等或输入备注
+  </text> -->
+  <import src="../search-template/search-template.wxml" />
+  <!-- <scroll-view class="grid-container" scroll-y="true" scroll-x="false" bindscrolltolower="Lower" style=' height:1300rpx;'>
+    <block wx:for="{{searchList}}" wx:key="searchBill" wx:for-item="item">
+      <template is='searchBillTemplate' data="{{...item}}" />
+    </block>
+  </scroll-view> -->
+  <block wx:for="{{searchList}}" wx:key="searchBill" wx:for-item="item">
+    <template is='searchBillTemplate' data="{{...item}}" />
+  </block>
+</view>
+<!-- 温馨提示 -->
+<view wx:if='{{promptShow}}' class='cue'>
+  <image src='../../images/homebill.png' class='homebill-img' mode="widthFix"></image>
+  <text class='home-cue'>空空如也，快去记一笔！</text>
+</view>

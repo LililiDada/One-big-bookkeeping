@@ -1,0 +1,31 @@
+<!-- 账单详情 -->
+<view class='header'>
+  <image src='{{image}}' class='type-img'></image>
+  <text>{{categoryname}}</text>
+</view>
+<view>
+  <view class='detail'>
+    <image src='../../images/wode.png' class='title' mode='aspectFit'></image>
+    <text class='genre'>类型</text>
+    <text>{{sort}}</text>
+  </view>
+  <view class='detail'>
+    <image src='../../images/jine.png' class='title' mode='aspectFit'></image>
+    <text class='genre'>金额</text>
+    <text>{{money}}</text>
+  </view>
+  <view class='detail'>
+    <image src='../../images/rili.png' class=' rili'></image>
+    <text class='genre' style='padding-left:35rpx'>日期</text>
+    <text>{{date}}</text>
+  </view>
+  <view class='detail remark'>
+    <image src='../../images/beizhu.png' class='title beizhu' mode='aspectFit'></image>
+    <text style='margin-top:10rpx' class='genre'>备注</text>
+    <text style='margin-top:10rpx'>{{remarks}}</text>
+  </view>
+</view>
+<view class='fastener'>
+  <button class='commonbtn editbtn' bindtap='editTap'>编辑</button>
+  <button class='commonbtn deletebtn' bindtap='deleteTap'>删除</button>
+</view>

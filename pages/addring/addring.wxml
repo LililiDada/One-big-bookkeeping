@@ -1,0 +1,26 @@
+<!-- 添加圈子 -->
+<block wx:for="{{type}}" wx:key='item'>
+  <view class='select' data-index="{{index}}" data-categoryid='{{item.categoryId}}' data-clicksrc='{{item.image}}' data-clicktitle='{{item.categoryName}}' bindtap="typeTap">
+    <view class="{{currentType==index ? 'click-back' : 'select-back'}}">
+      <image src='{{item.image}}' class='select-type' class="{{currentType==index ? 'click-type' : 'select-type'}}"></image>
+    </view>
+    <text class='titleText'>{{item.categoryName}}</text>
+  </view>
+</block>
+<view>
+  <view class='circle-sort'>
+    <view class='img-type'>
+      <image src='{{circleImg}}' class='circle-img'></image>
+    </view>
+    <text>圈子名</text>
+    <input value='{{circleName}}' class='circle-name' bindblur='getRingName'></input>
+  </view>
+  <view class='add-firend circle-sort' bindtap='addTap'>
+    <view class='img-type'>
+      <image src='../../images/friends.png' class='circle-img'></image>
+    </view>
+    <text>添加好友</text>
+    <image src='../../images/add.png' class='add' ></image>
+  </view>
+  <button class='confirm' bindtap='addRingTap'>确定</button>
+</view>

@@ -1,0 +1,63 @@
+@import "../account-template/account-template.wxss";
+.select-back{
+  width: 80rpx;
+  height: 80rpx;
+  background: #9bc08a
+}
+.select{
+  margin-top:40rpx 
+}
+.click-back{
+  width: 110rpx;
+  height: 110rpx;
+  background: #9bc08a
+}
+.click-type{
+  width:60rpx;
+  height:60rpx;
+  margin:auto;
+}
+.circle-sort{
+  font-size:35rpx; 
+  display: flex;
+  flex-direction: row;
+  margin: 60rpx 50rpx 20rpx 30rpx;
+  position: relative;
+  align-items: center;
+  padding-bottom: 15rpx;
+  border-bottom: 1rpx solid rgb(219, 219, 219);
+  color: #9bc08a;
+}
+.img-type{
+  display: flex;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  background: #9bc08a;
+  border-radius: 50%
+}
+.circle-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto;
+}
+.circle-name{
+  position:absolute;
+  right: 0;
+  text-align: right;
+  color: rgb(161, 161, 161)
+}
+.add-firend{
+  margin-top: 30rpx
+}
+.add{
+  position:absolute;
+  right: 0;
+  width: 50rpx;
+  height: 50rpx;
+}
+.confirm{
+  background: #9bc08a;
+  margin:60rpx 35rpx 0; 
+  color: white;
+}

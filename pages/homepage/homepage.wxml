@@ -1,0 +1,9 @@
+<!--授权登录首页  created 2019.03.31-->
+<view class="container">
+  <text class='title'>开启记账之旅</text>
+  <button class='loginbtn' open-type='getUserInfo'  bindgetuserinfo="bindgetUserInfo">
+    <image src='/images/time2.png' plain='true'></image>
+  </button>
+  <text class='tip'>微信一键登录</text>
+</view>
+

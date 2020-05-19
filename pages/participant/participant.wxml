@@ -1,0 +1,16 @@
+<!--添加圈子账单参与人-->
+<view class='top'>
+  <view class='search'>
+    <icon type='search' class='search-img' size='20' color='#9bc08a'></icon>
+    <input type='text' placeholder='搜索好友' placeholder-class='placeholder' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onBindConfirm' value='{{searchInput}}' class='searchbar' />
+  </view>
+  <text class='if-selectall' bindtap='selectTap'>{{ifselectall?'取消全选':'全选'}}</text>
+</view>
+<block wx:for="{{type}}" wx:key='menber'>
+  <view class='one-member'>
+    <image src='../../images/fellow.png' class='img'></image>
+    <text>{{item.userName}}</text>
+    <image class='select' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap"></image>
+  </view>
+</block>
+<button bindtap='confirmTap' class='confirm'>确定</button>

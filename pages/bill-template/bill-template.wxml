@@ -1,0 +1,15 @@
+<import src="eachdetailbill-template.wxml" />
+<template name='billTemplate'>
+  <view class='bill-box'>
+    <view class='bill-header'> 
+      <image src='../../images/zhangdan.png' class='bill-img'></image>
+      <text class='date'>{{day}}</text> 
+      <text class='bill-account' decode="{{true}}">{{sort}}&nbsp;&nbsp;{{getMoney}}</text>
+    </view>
+    <block wx:for='{{detail}}' wx:key="bill">
+      <view catchtap='onBillTap' data-accountid="{{item.accountid}}" data-image="{{item.typeImg}}" data-sort="{{item.sort}}" data-money="{{item.money}}" data-categoryid="{{item.categoryid}}" data-remarks="{{item.remarks}}" data-day="{{day}}" data-date='{{date}}' data-categoryname="{{item.smallType}}">
+        <template is='detailbillTemplate' data="{{...item}}" />
+      </view>
+    </block>
+  </view>
+</template>

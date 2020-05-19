@@ -1,0 +1,86 @@
+.ring-name{
+  background: #9bc08a;
+  color: white;
+  height: 100rpx;
+  width: 100%;
+  padding-bottom:20rpx; 
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* top:0; */
+  /* left: 0; */
+}
+.more{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 30rpx;
+}
+.ring-img{
+  background: #9bc08a;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  padding: 5rpx;
+  border: 1px solid white;
+  margin-right:20rpx; 
+}
+.ring-img>image{
+  width: 70rpx;
+  height: 70rpx;
+  margin: auto
+}
+.add{
+  position: fixed;
+  bottom: 50rpx;
+  right: 200rpx;
+  background: #9bc08a;
+  color: white;
+  z-index: 99;
+  width: 300rpx;
+}
+.ringbill{
+  display: flex;
+ height: 150rpx;
+ align-items: center;
+ padding: 5rpx;
+ border-bottom: 5rpx solid hsl(194, 62%, 92%);
+}
+.img-box{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: #9bc08a;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.ringbill .img{
+  width: 70rpx;
+  height: 70rpx;
+}
+.billname{
+  margin-left:10rpx; 
+}
+.billname,.billelse{
+  display: flex;
+  flex-direction: column;
+}
+.billelse{
+  position: absolute;
+  right: 20rpx;
+  text-align: right;
+}
+.name{
+  color: #4b4a4a;
+}
+.sum{
+  color: #e28e9d;
+  font-weight: 600;
+}
+.remarks,.time{
+  font-size:35rpx;
+  color: #878787;
+}

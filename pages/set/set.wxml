@@ -1,0 +1,12 @@
+<!-- 我的页面中的设置 -->
+<view>
+  <view class='avter'>
+   <text>头像</text>
+   <image src=' {{avtarimg}}' class='avtarimg'></image>
+  </view>
+  <view class='name '>
+   <text>昵称</text>
+   <text class='username '>{{username}}</text>
+  </view>
+  <button class='backlogin' bindtap='quitLoginTap'>退出登录</button>
+</view>

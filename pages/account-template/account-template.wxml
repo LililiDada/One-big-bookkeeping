@@ -1,0 +1,60 @@
+<template name='scrolltemplate'>
+   <scroll-view scroll-y="true" class='paytype' style=" ">
+    <block wx:for="{{type}}" wx:key='{{type}}'>
+      <view class='select'  data-index="{{index}}" data-categoryid='{{item.categoryId}}' data-clicksrc='{{item.imgsrc}}' data-clicktitle='{{item.title}}' bindtap="typeTap">
+        <view class="{{currentType==index ? 'click-back' : 'select-back'}}">
+          <image src='{{item.imgsrc}}' class='select-type'></image>
+        </view>
+        <text class='titleText'>{{item.title}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</template>
+
+
+<template name='accounttemplate'>
+  <view class='add'>
+    <view class='detail'>
+      <view class='click-back' style='width:70rpx;height:70rpx;margin:0' >
+        <image src='{{clicksrc}}' class='select-type' style='width:50rpx;height:50rpx;'></image>
+      </view>
+      <text style='margin-left:20rpx'>{{clicktitle}}</text>
+      <input type='digit' class='moneyipt' placeholder='0.00' focus='true' bindblur='getMoney'/>
+    </view>
+    <view class='detail select-date' >
+      <image src='../../images/rili.png' style='width:60rpx;height:60rpx'></image>
+      <text style='margin-left:30rpx'>日期</text>
+      <picker mode='date' start='2000/01/01' end='2029/12/31' bindchange='bindDateChange' class='concet-date'>{{month}}月{{day}}日 </picker>
+    </view>
+    <view class='remark detail '>
+      <image src='../../images/remark.png' style='width:60rpx;height:60rpx'></image>
+      <text style='margin-left:35rpx'>备注</text>
+      <input class='remarkmsg' bindblur='getRemark'/>
+    </view>
+    <button class='confirmbtn' bindtap='addbill'>确定</button>
+  </view>
+</template>
+
+
+<template name='altertemplate'>
+  <view class='add'>
+    <view class='detail'>
+      <view class='click-back' style='width:70rpx;height:70rpx;margin:0'>
+        <image src='{{clicksrc}}' class='select-type' style='width:50rpx;height:50rpx;'></image>
+      </view>
+      <text style='margin-left:40rpx'>{{clicktitle}}</text>
+      <input type='digit' class='moneyipt' value='{{sum}}' focus='true' bindblur='getMoney'/>
+    </view>
+    <view class='detail select-date'>
+      <image src='../../images/rili.png' style='width:70rpx;height:70rpx;' ></image>
+      <text style='margin-left:40rpx'>日期</text>
+      <picker mode='date' start='2000/01/01' end='2029/12/31' bindchange='bindDateChange' class='concet-date'>{{date}} </picker>
+    </view>
+    <view class='remark detail '>
+      <image src='../../images/remark.png' style='width:70rpx;height:70rpx'></image>
+      <text style='margin-left:40rpx'>备注</text>
+      <input class='remarkmsg' bindblur='getRemark' value='{{remark}}' />
+    </view>
+    <button class='confirmbtn' bindtap='addbill'>确定</button>
+  </view>
+</template>

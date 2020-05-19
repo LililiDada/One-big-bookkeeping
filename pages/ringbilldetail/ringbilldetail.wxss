@@ -1,0 +1,136 @@
+
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+  width:250rpx;
+  border:1px solid #9bc08a;
+  border-radius:15rpx;
+  margin: 15rpx auto;
+  color: #9bc08a;
+}
+.navbar .item{
+  position: relative;
+  text-align: center;
+  line-height: 55rpx;
+  width: 200rpx;
+}
+.navbar .item.active{
+  color: white;
+  background: #9bc08a;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:40rpx 0;
+  color: #424242;
+}
+.ring-img{
+  background: #9bc08a;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+}
+.ring-img>image{
+  width: 70rpx;
+  height: 70rpx;
+  margin: auto
+}
+.detail{
+  padding: 0 40rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100rpx;
+  border-bottom: 1rpx solid #f4f0f0;
+  font-size: 34rpx;
+}
+.title{
+  width: 65rpx;
+  height:65rpx;
+}
+.text{
+  position: absolute;
+  right: 40rpx;
+}
+.button{
+  display: flex;
+  width: 440rpx;
+  justify-content: center;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 100rpx;
+}
+.delete,.edit{
+  width: 200rpx;
+  background: #9bc08a;
+  color: white;
+}
+.delete{
+  margin-right: 80rpx;
+  background: #f4c73d;
+}
+
+/* 参与人 */
+.more{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 40rpx;
+  top: 7rpx;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #9bc08a;
+  margin: 40rpx;
+  border-radius:50rpx;
+  height: 70rpx;
+  align-items: center; 
+  padding: 0 15rpx;
+}
+.search input{
+  width: 100%;
+}
+.xx-img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: auto 20rpx auto 0;
+}
+.one-member{
+  position: relative;
+  color: #575757;
+  margin: 20rpx 35rpx;
+  padding-bottom:25rpx;
+  border-bottom:1px solid rgb(230, 229, 229);
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+}
+.img{
+  width: 55rpx;
+  height: 55rpx;
+  margin-right: 25rpx;
+}
+.select{
+  
+  position: absolute;
+  right: 20rpx;
+  top:8rpx; 
+}
+.pay{
+  color: #ec6c60;
+}
+.count{
+  width: 250rpx;
+  background: #9bc08a;
+  color: white;
+  position: absolute;
+  bottom: 50rpx;
+  right: 0;
+  left: 0;
+  margin: auto;
+}

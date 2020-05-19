@@ -1,0 +1,15 @@
+<!-- 根据已有的好友或添加成员添加圈子好友 -->
+<view class='header'>
+  <view class='add' bindtap='addTap'>
+    <text>+ 添加成员</text>
+  </view>
+  <text class='if-selectall' bindtap='selectTap'>{{ifselectall?'取消全选':'全选'}}</text>
+</view>
+<block wx:for="{{type}}" wx:key='menber'>
+  <view class='one-member'>
+    <image src='../../images/fellow.png' class='img'></image>
+    <text>{{item.userName}}</text>
+    <image class='select' src="{{item.status? hasSelect : noSelect}}" data-selectIndex="{{index}}" bindtap="checkTap"></image>
+  </view>
+</block>
+<button class='confirm' bindtap='addFellowTap'>确定</button>

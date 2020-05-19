@@ -1,0 +1,20 @@
+<!--圈子页面-->
+<view class='add' bindtap='addBillRing'> + </view>
+<view class='cue' wx:if='{{cueShow}}'>当多人共同消费，需要"AA"时，可点击"+"添加圈子，需付金额，一目了然</view>
+
+<view  class='ring'>
+ <block wx:for='{{ring}}' wx:key='{{item}}'>
+   <view class='detail-ring' style="background:url('{{backgroundUrl}}') no-repeat;background-size: 300rpx 160rpx;" bindtap='detailRingTap' data-circleid='{{item.circleId}}'>
+     <view class='img'>
+       <image src='{{item.image}}' class='ring-img'></image>
+    </view>
+   <view class='else'>
+    <text style='font-weight:600'>{{item.ringname}}</text>
+    <text style='font-size:30rpx; margin-top:10rpx'>{{item.day}}</text> 
+   </view>
+    
+  
+  </view>
+  </block>
+</view>
+   

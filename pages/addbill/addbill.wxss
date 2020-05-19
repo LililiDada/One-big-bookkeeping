@@ -1,0 +1,93 @@
+@import "../account-template/account-template.wxss";
+.paytype{
+  /* border-bottom: none; */
+  /* margin-bottom: 25rpx; */
+}
+.sort{
+  width: 110rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #9bc08a;
+  margin: 20rpx auto 0;
+  color: white;
+  text-align: center;
+  border-radius: 25rpx;
+  font-size: 30rpx;
+}
+.big-payment{
+  margin: 20rpx 0;
+}
+.payment{
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+.person{
+  width: 50rpx;
+  height: 50rpx;
+}
+.payment-men{
+  color: #636262;
+  font-size: 25rpx;
+}
+.arrow{
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  right: 15rpx;
+}
+.person-img{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 5rpx;
+  border: 1px solid #a1a1a1;
+  border-radius: 25rpx;
+  margin-right: 8rpx;
+}
+.payment-name{
+  padding-left: 10rpx;
+  font-size: 30rpx;
+}
+.sum{
+  position: absolute;
+  right: 20rpx;
+  text-align: right;
+  color: #636262;
+  font-size: 30rpx;
+}
+.more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  color: #636262;
+  padding-bottom: 5rpx;
+  /* border-bottom: 1rpx solid #e4e4e4; */
+}
+.more-img{
+  width: 28rpx;
+  height: 28rpx;
+}
+.big-more{
+  font-size: 25rpx;
+}
+.big-more img{
+  width: 25rpx;
+  height: 25rpx
+}
+.select-date,.remark{
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+.concet-date,.remarkmsg {
+  position:absolute;
+  right:20rpx;
+}
+.confirmbtn{
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 30rpx auto;
+}

@@ -1,0 +1,81 @@
+<!-- 圈子账单详情 -->
+
+<!-- 导航条 -->
+<view class="navbar">
+  <text wx:for='{{navber}}' wx:key='index' data-index='{{index}}' class="item {{currentTab==index ? 'active' : ''}}" bindtap='navbarTap'>{{item}}</text>
+</view>
+
+<!-- 详情 -->
+<view hidden="{{currentTab!==0}}">
+  <view class='header'>
+    <view class='ring-img'>
+      <image src='{{image}}'></image>
+    </view>
+    <text>{{categoryName}}</text>
+  </view>
+  <view style='height:20rpx;background:#f4f0f0'></view>
+  <view class='detail'>
+    <text>记账日期</text>
+    <text class='text'>{{date}}</text>
+  </view>
+  <view class='detail'>
+    <text>圈子名称</text>
+    <text class='text'>{{circleName}}</text>
+  </view>
+  <view class='detail'>
+    <text>付款人</text>
+    <text class='text'>{{userName}}</text>
+  </view>
+  <view class='detail'>
+    <!-- <image src='../../images/jine.png' class='title' mode='aspectFit'></image> -->
+    <text>付款总金额</text>
+    <text class='text'>{{allAmount}}</text>
+  </view>
+  <view class='detail'>
+    <text>应付金额</text>
+    <text class='text'>{{averageAmount}}</text>
+  </view>
+  <view class='detail'>
+    <text>备注</text>
+    <text class='text'>{{remarks}}</text>
+  </view>
+  <view class='button'>
+    <button class='delete' bindtap='deleteTap'>删除</button>
+    <button class='edit' bindtap='editTap'>编辑</button>
+  </view>
+
+</view>
+
+<!-- 参与人 -->
+<view hidden="{{currentTab!==1}}">
+  <picker bindchange="bindPickerChange" mode='selector' value="2" range="{{array}}">
+    <view class="picker">
+      <!-- 当前选择：{{array[index]}} -->
+      <image src='../../images/moreandmore.png' class='more'></image>
+    </view>
+  </picker>
+
+  <view class='search'>
+    <icon type='search' color='#9bc08a' size='22'></icon>
+    <input placeholder='搜索好友' bindfocus="onBindFocus" confirm-type='search' bindconfirm='onBindConfirm' value='{{searchInput}}' />
+    <image wx:if="{{searchPanelShow}}" src="../../images/chahao.png" class="xx-img" bindtap="onCancelTap"></image>
+  </view>
+  <!-- 搜索显示 -->
+  <view wx:if='{{searchShow}}'>
+    <view class='one-member' wx:for='{{searchmenber}}'>
+      <image src='../../images/fellow.png' class='img'></image>
+      <text>{{item.userName}}</text>
+      <text class="select {{item.paymentStatus?'':'pay'}} ">{{item.how}}</text>
+    </view>
+  </view>
+
+
+  <block wx:for="{{type}}" wx:key='menber' wx:if='{{partShow}}'>
+    <view class='one-member'>
+      <image src='../../images/fellow.png' class='img'></image>
+      <text>{{item.userName}}</text>
+      <text class="select {{item.paymentStatus?'':'pay'}} ">{{item.how}}</text>
+    </view>
+  </block>
+  <button class='count' bindtap='countTap' wx:if='{{countbtn}}'>清算</button>
+</view>

@@ -1,0 +1,36 @@
+/* pages/homepage/homepage.wxss */
+page{
+  color:#fbffff;
+  font-family: "华文琥珀";
+  background-color: #9bc08a;
+}
+.container{
+   display: flex;
+   flex-direction: column;
+   padding: 200rpx 0;
+   background-color: #9bc08a;
+}
+.title{
+  margin-top: 50rpx;
+  /*font-weight: bold;*/
+  font-size: 35px;
+}
+.loginbtn{
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0 solid #bfd7b3;
+  border-radius: 50%;
+  background-color: #bfd7b3;
+  margin-top: 100rpx
+}
+.loginbtn image{
+  width: 80px;
+  height: 80px;
+}
+.tip{
+  margin-top: 30rpx;
+  font-family: "微软雅黑";
+}

@@ -1,0 +1,17 @@
+<!-- <text class='title' style="background:url('../../images/partbg1.png') no-repeat;background-size: 300rpx 180rpx; background-clip: content-box:">成员</text> -->
+<image src='../../images/partbg1.png' class='title'></image>
+<view class="part">
+  <block wx:for='{{part}}' wx:key='{{item}}'>
+    <view class='one-part'>
+      <image src='../../images/fellow.png' class='part-img'></image>
+      <text>{{item.userName}}</text>
+    </view>
+  </block>
+  <view class='change' bindtap='addfellowTap'>+</view>
+  <view class='change' bindtap='deletefellowTap'>-</view>
+</view>
+<view style='height:15rpx;background:#ecebeb;margin-top:15rpx'></view>
+<view class='all-btn'>
+  <button bindtap='editringTap'>修改圈子</button>
+  <button bindtap='deltringTap'>删除圈子</button>
+</view>

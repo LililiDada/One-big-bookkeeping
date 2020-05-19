@@ -1,0 +1,52 @@
+.usemsg{
+  width: 100%;
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center
+}
+.avtar-img{
+  margin:30rpx auto 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius:50%; 
+}
+.apart{
+  width:100%;
+  height: 15rpx;
+  background: #e6e6e6;
+}
+.other{
+  margin: 20rpx 20rpx 0rpx  ;
+}
+.yusuan,.shezhi{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  position:relative;
+  margin-top: 50rpx
+}
+.yusuan-img,.shezhi-img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 15rpx
+}
+.yusuanipt{
+  width: 470rpx;
+  text-align: right;
+  color: #acacac;
+}
+.jaintou-img,.jinru-img{
+  position:absolute;
+  right:20rpx;
+  margin-left: 20rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+.loginbtn{
+  margin: 50rpx 20rpx 0 10rpx;
+  background: #9bc08a;
+  color: white;
+  height: 100rpx;
+  line-height: 100rpx;
+}

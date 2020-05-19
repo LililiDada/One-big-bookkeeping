@@ -1,0 +1,31 @@
+.avter,.name{
+  height: 150rpx;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  margin: 40rpx;
+  border-bottom: 1px solid #b6d2aa;
+}
+.avtarimg{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius:50%; 
+  position: absolute;
+  right: 40rpx;
+}
+.username{
+  position: absolute;
+  right: 40rpx;
+}
+.avter{
+  margin-top:60rpx;
+}
+.name{
+  height: 100rpx;
+}
+.backlogin{
+  margin:100rpx 40rpx 0;
+  text-align: center;
+  background: #9bc08a;
+  color: white;
+}

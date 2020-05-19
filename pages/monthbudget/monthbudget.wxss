@@ -1,0 +1,18 @@
+.budgetipt{
+  width: 90%;
+  height:80rpx;
+  background: #e6f0e2;
+  border: 1px solid #e6f0e2;
+  border-radius: 100rpx;
+  margin:50rpx auto;
+  text-align: center
+}
+.confirm{
+  width: 90%;
+  height:80rpx;
+  background: #9bc08a;
+  border: 1px solid #9bc08a;
+  border-radius: 100rpx;
+  color: white;
+  line-height: 75rpx;
+}

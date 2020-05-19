@@ -1,0 +1,26 @@
+<view class='header'>
+  <view class='require'>
+    <text>收取</text>
+    <text class='sum'>{{averageAmount}}</text>
+  </view>
+  <view class='menber'>
+   <text class='payer'>{{payer}}</text>
+   <text>向</text>
+   <text class='part'>{{userName}}</text>
+  </view>
+</view>
+<view style='height:20rpx;background:#f6f6f6'></view>
+<view class='body'>
+  <view class='row'>
+  <text class='key'>清帐时间</text>
+  <text class='val'>{{date}}</text>
+  </view>
+  <view class='row'>
+  <text class='key'>执行人</text>
+  <text class='val'>{{payer}}</text>
+  </view>
+  <view class='row'>
+  <text class='key'>结算来源</text>
+  <text class='val'>餐饮</text>
+  </view>
+</view>

@@ -1,0 +1,57 @@
+page{
+  /* background: black */
+}
+.add{
+  height: 100rpx;
+  border: 1px dashed #ccc;
+  margin: 30rpx 50rpx;
+  color: #ccc;
+  font-size:40px; 
+  text-align: center;
+  line-height: 90rpx;
+}
+.cue{
+  margin: 50rpx 20rpx;
+  text-align: center;
+  color: rgb(153, 153, 151);
+}
+.ring{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.detail-ring{
+  width: 300rpx;
+  height: 150rpx;
+  /* border: 1rpx solid #9bc08a; */
+  /* background: #9bc08a; */
+  /* background: url('../../images/background.png'); */
+  font-family: '幼圆'; 
+  color: white;
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+.ring-img{
+  width: 40rpx;
+  height: 40rpx;
+  margin: auto
+}
+.else{
+  display: flex;
+  flex-direction: column;
+  margin-left:15rpx;
+  text-align: center; 
+}
+.img{
+  width: 60rpx;
+  height:60rpx;
+  border: 1rpx solid white;
+  border-radius: 50%;
+  display: flex;
+}
